@@ -33,10 +33,12 @@ public class Drawer{
   }
   public void fillRect(double x, double y, double width, double height){
     this.rect(x, y, width, height);
+    turtle.width(5);
     for(int i = 4;i < width;i += 5){
       this.moveTo(x + i, y);
       this.lineTo(x + i, y + height);
     }
+    turtle.width(1);
   }
   public void fillSquare(double x, double y, double width){
     this.fillRect(x, y, width, width);
